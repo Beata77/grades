@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+</head>
+<body>
+    <h1>What is your grade?</h1>
+    <label><h2>Type your score:</h2></label>    
+    <div><input id="myNumber" type="number" value="0" min="0" max="100"></div><br>
+    <input type="button" style="height:30px;width:70px"  onclick="calculation()" value="submit">
+    <p id="answer"></p>
+    <script>
+    calculation = () => {
+        let num = document.getElementById("myNumber").value;
+
+        if (num > 90) {
+            document.getElementById("answer").innerHTML  = "Grade A+"; 
+        }
+        if (num > 80 && num <= 90) {
+            document.getElementById("answer").innerHTML = "Grade A";
+        }
+        if (num > 70 && num <=80) {
+            document.getElementById("answer").innerHTML = "Grade B+";
+        }
+        if (num > 60 && num <=70) {
+            document.getElementById("answer").innerHTML = "Grade B";
+        }
+        if (num > 50 && num <=60) {
+            document.getElementById("answer").innerHTML = "Grade C";
+        }
+        if (num > 40 && num <=50) {
+            document.getElementById("answer").innerHTML = "Grade D";
+        }
+        if (num <=40) {
+            document.getElementById("answer").innerHTML = "Failed";
+        }
+
+    }</script>
+</body>
+</html>
